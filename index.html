@@ -235,7 +235,7 @@
     .photo-badge {
       position: absolute;
       bottom: -5px;
-      right: calc(50% - 85px);
+      right: calc(50% - 60px);
       background: #ff6b9d;
       color: white;
       font-size: 0.6rem;
@@ -363,7 +363,7 @@
       Maaf ya beberapa hari ini aku beneran ga ada waktu buat kamu,
       bukan berarti aku lupa atau ga peduli,
       justru kamu selalu ada di pikiran aku 🥺💭<br><br>
-      Semangat terus ya buat hari-harinya,
+      Semangat terus ya kerjanya,
       jangan lupa makan, jaga kesehatan,
       dan jangan tidur kemalaman! 😤🍱<br><br>
       Aku lagi berjuang juga buat kita,
@@ -431,8 +431,10 @@
     }
 
     function closeLetter() {
-      document.getElementById('letter').classList.remove('show');
-      document.getElementById('letter').style.display = 'none';
+      const letter = document.getElementById('letter');
+      letter.classList.remove('show');
+      // reset inline style biar CSS class bisa bekerja lagi
+      letter.style.display = '';
       const wrapper = document.getElementById('envelopeWrapper');
       wrapper.style.display = 'flex';
       document.getElementById('envelope').classList.remove('open');
